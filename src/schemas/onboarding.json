@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/Proposal",
+  "definitions": {
+    "Proposal": {
+      "title": "Proposal",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "name",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "body": {
+          "type": "string",
+          "title": "body",
+          "minLength": 0,
+          "maxLength": 14400
+        },
+        "start": {
+          "type": "number",
+          "title": "start",
+          "minimum": 1000000000,
+          "maximum": 2000000000
+        },
+        "end": {
+          "type": "number",
+          "title": "end",
+          "minimum": 1000000000,
+          "maximum": 2000000000,
+          "exclusiveMinimum": {
+            "$data": "1/start"
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "title": "metadata"
+        }
+      },
+      "required": ["name", "body", "start"],
+      "additionalProperties": false
+    }
+  }
+}
