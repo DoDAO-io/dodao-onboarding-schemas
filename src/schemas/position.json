@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$ref": "#/definitions/Proposal",
+  "$ref": "#/definitions/Position",
   "definitions": {
-    "Proposal": {
-      "title": "Proposal",
+    "Position": {
+      "title": "Position",
       "type": "object",
       "properties": {
         "name": {
