@@ -9,14 +9,16 @@ interface GuideQuestionChoice {
 }
 
 interface GuideQuestion {
+  id: string;
   description: string;
   choices: GuideQuestionChoice[];
   answerKeys: string[];
   type: QuestionType;
+  order: number;
 }
 
 interface GuideStep {
-  name: string;
+  title: string;
   content: string;
   order: number;
   questions: GuideQuestion[];
