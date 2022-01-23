@@ -11,10 +11,10 @@ export interface QuestionChoice {
 
 export interface GuideQuestion {
   id: string;
-  description: string;
+  content: string;
   choices: QuestionChoice[];
   answerKeys: string[];
-  type: QuestionType;
+  questionType: QuestionType;
   order: number;
 }
 
@@ -22,17 +22,20 @@ export interface GuideStep {
   id: string;
   name: string;
   content: string;
-  choices: GuideQuestion[];
+  questions: GuideQuestion[];
   order: number;
 }
 
 export interface Guide {
+  id?: string;
   from?: string;
   space: string;
   timestamp?: number;
   name: string;
-  excerpt: string;
+  content: string;
   steps: GuideStep[];
   network: string;
-  metadata: string;
+  metadata: {
+    network: string;
+  };
 }
