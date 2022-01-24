@@ -13,7 +13,19 @@
           "type": "string"
         },
         "metadata": {
-          "type": "string"
+          "anyOf": [
+            {
+              "properties": {
+                "network": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            {
+              "type": "string"
+            }
+          ]
         },
         "name": {
           "type": "string"
@@ -54,9 +66,6 @@
           "type": "array"
         },
         "content": {
-          "type": "string"
-        },
-        "id": {
           "type": "string"
         },
         "order": {
@@ -102,17 +111,11 @@
         "content": {
           "type": "string"
         },
-        "id": {
-          "type": "string"
-        },
         "key": {
           "type": "string"
         },
         "order": {
           "type": "number"
-        },
-        "uuid": {
-          "type": "string"
         }
       },
       "type": "object"
