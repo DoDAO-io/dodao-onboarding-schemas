@@ -1,31 +1,41 @@
-enum QuestionType {
+export enum QuestionType {
   SingleChoice = 'SingleChoice',
   MultipleChoice = 'MultipleChoice'
 }
 
-interface GuideQuestionChoice {
+export interface QuestionChoice {
   key: string;
   content: string;
-}
-
-interface GuideQuestion {
-  id: string;
-  description: string;
-  choices: GuideQuestionChoice[];
-  answerKeys: string[];
-  type: QuestionType;
   order: number;
 }
 
-interface GuideStep {
-  title: string;
+export interface GuideQuestion {
+  uuid: string;
   content: string;
+  choices: QuestionChoice[];
+  answerKeys: string[];
+  questionType: QuestionType;
   order: number;
-  questions: GuideQuestion[];
 }
 
-interface Guide {
+export interface GuideStep {
+  id: string;
+  uuid: string;
   name: string;
-  excerpt: string;
+  content: string;
+  questions: GuideQuestion[];
+  order: number;
+}
+
+export interface Guide {
+  id: string;
+  uuid: string;
+  from?: string;
+  space: string;
+  timestamp?: number;
+  name: string;
+  content: string;
   steps: GuideStep[];
+  network: string;
+  metadata: string;
 }

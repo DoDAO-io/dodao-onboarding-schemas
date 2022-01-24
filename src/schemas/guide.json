@@ -1,45 +1,128 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$ref": "#/definitions/Position",
   "definitions": {
-    "Position": {
-      "title": "Position",
-      "type": "object",
+    "Guide": {
       "properties": {
-        "name": {
-          "type": "string",
-          "title": "name",
-          "minLength": 1,
-          "maxLength": 256
+        "content": {
+          "type": "string"
         },
-        "body": {
-          "type": "string",
-          "title": "body",
-          "minLength": 0,
-          "maxLength": 14400
+        "from": {
+          "type": "string"
         },
-        "start": {
-          "type": "number",
-          "title": "start",
-          "minimum": 1000000000,
-          "maximum": 2000000000
-        },
-        "end": {
-          "type": "number",
-          "title": "end",
-          "minimum": 1000000000,
-          "maximum": 2000000000,
-          "exclusiveMinimum": {
-            "$data": "1/start"
-          }
+        "id": {
+          "type": "string"
         },
         "metadata": {
-          "type": "object",
-          "title": "metadata"
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "network": {
+          "type": "string"
+        },
+        "space": {
+          "type": "string"
+        },
+        "steps": {
+          "items": {
+            "$ref": "#/definitions/GuideStep"
+          },
+          "type": "array"
+        },
+        "timestamp": {
+          "type": "number"
+        },
+        "uuid": {
+          "type": "string"
         }
       },
-      "required": ["name", "body", "start"],
-      "additionalProperties": false
+      "type": "object"
+    },
+    "GuideQuestion": {
+      "properties": {
+        "answerKeys": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "choices": {
+          "items": {
+            "$ref": "#/definitions/QuestionChoice"
+          },
+          "type": "array"
+        },
+        "content": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "questionType": {
+          "$ref": "#/definitions/QuestionType"
+        },
+        "uuid": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "GuideStep": {
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "questions": {
+          "items": {
+            "$ref": "#/definitions/GuideQuestion"
+          },
+          "type": "array"
+        },
+        "uuid": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "QuestionChoice": {
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "uuid": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "QuestionType": {
+      "enum": [
+        "MultipleChoice",
+        "SingleChoice"
+      ],
+      "type": "string"
     }
   }
 }
