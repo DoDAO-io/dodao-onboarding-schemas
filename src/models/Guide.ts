@@ -4,38 +4,38 @@ export enum QuestionType {
 }
 
 export interface QuestionChoice {
-  key: string;
   content: string;
+  key: string;
   order: number;
 }
 
 export interface GuideQuestion {
-  uuid: string;
-  content: string;
-  choices: QuestionChoice[];
   answerKeys: string[];
-  questionType: QuestionType;
+  choices: QuestionChoice[];
+  content: string;
   order: number;
+  questionType: QuestionType;
+  uuid: string;
 }
 
 export interface GuideStep {
-  id: string;
-  uuid: string;
-  name: string;
   content: string;
-  questions: GuideQuestion[];
+  id?: string;
+  name: string;
   order: number;
+  questions: GuideQuestion[];
+  uuid: string;
 }
 
 export interface Guide {
-  id?: string;
-  uuid: string;
-  from?: string;
-  space: string;
-  timestamp?: number;
-  name: string;
   content: string;
-  steps: GuideStep[];
-  network: string;
+  from?: string;
+  id?: string;
   metadata: string;
+  name: string;
+  network: string;
+  space: string;
+  steps: GuideStep[];
+  timestamp?: number;
+  uuid: string;
 }
