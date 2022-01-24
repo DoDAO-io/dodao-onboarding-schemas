@@ -10,7 +10,7 @@ export interface QuestionChoice {
 }
 
 export interface GuideQuestion {
-  id: string;
+  uuid: string;
   content: string;
   choices: QuestionChoice[];
   answerKeys: string[];
@@ -20,6 +20,7 @@ export interface GuideQuestion {
 
 export interface GuideStep {
   id: string;
+  uuid: string;
   name: string;
   content: string;
   questions: GuideQuestion[];
@@ -28,6 +29,7 @@ export interface GuideStep {
 
 export interface Guide {
   id?: string;
+  uuid: string;
   from?: string;
   space: string;
   timestamp?: number;
@@ -35,7 +37,5 @@ export interface Guide {
   content: string;
   steps: GuideStep[];
   network: string;
-  metadata: {
-    network: string;
-  };
+  metadata: string;
 }
