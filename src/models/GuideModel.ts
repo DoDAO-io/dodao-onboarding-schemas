@@ -27,21 +27,17 @@ export interface GuideStep {
   uuid: string;
 }
 
-export interface NetworkMetadata {
-  network: string;
-}
-
-export interface Guide {
-  previous_id: string | null;
-  content: string;
-  authors: string[];
+export interface GuideModel {
   id: string;
-  metadata: string | NetworkMetadata;
+  authors: string[];
+  content: string;
   name: string;
+  previousId: string | null;
   space: string;
   steps: GuideStep[];
   timestamp?: number;
   uuid: string;
+  version: number;
 }
 
-export type GuideWithoutSteps = Omit<Guide, 'steps'>;
+export type GuideWithoutSteps = Omit<GuideModel, 'steps'>;
