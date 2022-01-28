@@ -32,14 +32,16 @@ export interface NetworkMetadata {
 }
 
 export interface Guide {
+  previous_id: string | null;
   content: string;
-  from?: string;
-  id?: string;
+  authors: string[];
+  id: string;
   metadata: string | NetworkMetadata;
   name: string;
-  network: string;
   space: string;
   steps: GuideStep[];
   timestamp?: number;
   uuid: string;
 }
+
+export type GuideWithoutSteps = Omit<Guide, 'steps'>;
