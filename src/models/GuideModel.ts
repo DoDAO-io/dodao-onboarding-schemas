@@ -1,3 +1,5 @@
+import { SpaceModel } from './SpaceModel';
+
 export enum QuestionType {
   SingleChoice = 'SingleChoice',
   MultipleChoice = 'MultipleChoice'
@@ -33,7 +35,7 @@ export interface GuideModel {
   content: string;
   name: string;
   previousId: string | null;
-  space: string;
+  space: SpaceModel;
   steps: GuideStep[];
   timestamp?: number;
   uuid: string;
