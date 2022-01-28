@@ -9,7 +9,7 @@ export interface GuideStepInput {
 }
 
 export interface GuideInput {
-  author: string;
+  from: string;
   content: string;
   name: string;
   space: string;
