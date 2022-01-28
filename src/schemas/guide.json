@@ -12,25 +12,8 @@
         "id": {
           "type": "string"
         },
-        "metadata": {
-          "anyOf": [
-            {
-              "properties": {
-                "network": {
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            {
-              "type": "string"
-            }
-          ]
-        },
+
         "name": {
-          "type": "string"
-        },
-        "network": {
           "type": "string"
         },
         "space": {
