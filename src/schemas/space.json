@@ -25,6 +25,11 @@
           "title": "about",
           "maxLength": 160
         },
+        "creator": {
+          "type": "string",
+          "title": "creator",
+          "maxLength": 160
+        },
         "guidelines": {
           "type": "string",
           "title": "guidelines",
