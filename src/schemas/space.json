@@ -15,6 +15,11 @@
         "private": {
           "type": "boolean"
         },
+        "mission": {
+          "type": "string",
+          "title": "about",
+          "maxLength": 160
+        },
         "about": {
           "type": "string",
           "title": "about",
@@ -154,7 +159,7 @@
           }
         }
       },
-      "required": ["name", "network"],
+      "required": ["name", "network", "mission"],
       "additionalProperties": false
     }
   }
