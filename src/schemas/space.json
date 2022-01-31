@@ -17,13 +17,13 @@
         },
         "mission": {
           "type": "string",
-          "title": "about",
+          "title": "mission",
           "maxLength": 160
         },
         "about": {
           "type": "string",
           "title": "about",
-          "maxLength": 160
+          "maxLength": 2048
         },
         "creator": {
           "type": "string",
