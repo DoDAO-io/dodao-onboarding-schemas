@@ -10,10 +10,12 @@ export interface GuideStepInput {
 
 export interface GuideInput {
   from: string;
+  categories: string[];
   content: string;
   name: string;
   space: string;
   steps: GuideStepInput[];
+  thumbnail?: string;
   timestamp?: number;
   uuid: string;
 }
