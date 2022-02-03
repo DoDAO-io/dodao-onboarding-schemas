@@ -32,11 +32,13 @@ export interface GuideStep {
 export interface GuideModel {
   id: string;
   authors: string[];
+  categories: string[];
   content: string;
   name: string;
   previousId: string | null;
   space: SpaceModel;
   steps: GuideStep[];
+  thumbnail?: string;
   timestamp?: number;
   uuid: string;
   version: number;
