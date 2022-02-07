@@ -12,5 +12,6 @@ export interface GuideResponseInput {
   from: string;
   timestamp: number;
   uuid: string;
+  guideUuid: string;
   steps: GuideStepResponse[];
 }
