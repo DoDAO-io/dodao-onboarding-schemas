@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string"
+    },
+    "guideUuid": {
+      "type": "string"
+    },
+    "from": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string"
+            },
+            "questionResponses": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "uuid": {
+                      "type": "string"
+                    },
+                    "selectedAnswerKeys": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "uuid",
+                    "selectedAnswerKeys"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "uuid",
+            "questionResponses"
+          ]
+        }
+      ]
+    },
+    "timestamp": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "uuid",
+    "guideUuid",
+    "from",
+    "steps",
+    "timestamp"
+  ]
+}
