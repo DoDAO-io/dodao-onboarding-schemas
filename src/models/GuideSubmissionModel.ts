@@ -16,7 +16,7 @@ export interface GuideSubmissionResult {
 export interface GuideSubmission {
   id: string;
   ipfs: string;
-  from: string;
+  createdBy: string;
   guideId: string;
   guideIpfs: string;
   guideUuid: string;
@@ -26,3 +26,5 @@ export interface GuideSubmission {
   created: number;
   uuid: string;
 }
+
+export type GuideSubmissionWithoutSteps = Omit<GuideSubmission, 'steps'>;
