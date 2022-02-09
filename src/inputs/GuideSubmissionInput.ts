@@ -1,17 +1,10 @@
-export interface GuideQuestionSubmission {
-  selectedAnswerKeys: string[];
-  uuid: string;
-}
-
-export interface GuideStepSubmission {
-  questionResponses: GuideQuestionSubmission[];
-  uuid: string;
-}
+import { GuideStepSubmission } from 'models/GuideSubmissionModel';
 
 export interface GuideSubmissionInput {
   from: string;
-  timestamp: number;
+  timestamp: string;
   uuid: string;
   guideUuid: string;
+  space: string;
   steps: GuideStepSubmission[];
 }

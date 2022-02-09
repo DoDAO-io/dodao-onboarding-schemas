@@ -1,4 +1,4 @@
-import { GuideQuestion } from '../models/GuideModel';
+import { GuideQuestion } from 'models/GuideModel';
 
 export interface GuideStepInput {
   content: string;
