@@ -8,4 +8,5 @@ export interface MsgResponse {
   uuid?: string;
   ipfs: string;
   relayer: RelayerResponse;
+  result: any;
 }
