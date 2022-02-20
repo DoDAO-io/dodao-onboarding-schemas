@@ -10,6 +10,7 @@ export interface SpaceSettingsInput {
   network: string;
   terms: string;
   twitter: string;
+  blockchain: string;
 }
 
 export interface SpaceInput {

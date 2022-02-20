@@ -15,6 +15,11 @@
         "private": {
           "type": "boolean"
         },
+        "blockchain": {
+          "type": "string",
+          "title": "blockchain",
+          "maxLength": 160
+        },
         "mission": {
           "type": "string",
           "title": "mission",
@@ -164,7 +169,7 @@
           }
         }
       },
-      "required": ["name", "network", "mission"],
+      "required": ["name", "network", "mission", "blockchain"],
       "additionalProperties": false
     }
   }
