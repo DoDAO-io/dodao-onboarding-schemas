@@ -675,5 +675,27 @@
       "helperUrl": "https://helper.betanet.near.org",
       "explorerUrl": "https://explorer.betanet.near.org"
     }
+  },
+  "SOL": {
+    "mainnet": {
+      "name": "Mainnet",
+      "key": "mainnet",
+      "networkId": "mainnet",
+      "apiUrl": "https://rpc.mainnet.near.org"
+    },
+    "testnet": {
+      "name": "Testnet",
+      "key": "testnet",
+      "networkId": "testnet",
+      "testnet": true,
+      "apiUrl": "https://rpc.mainnet.near.org"
+    },
+    "betanet": {
+      "name": "Betanet",
+      "key": "betanet",
+      "networkId": "betanet",
+      "testnet": true,
+      "apiUrl": "https://rpc.mainnet.near.org"
+    }
   }
 }
