@@ -34,6 +34,7 @@ export interface GuideModel {
   authors: string[];
   categories: string[];
   content: string;
+  discordWebhook?: string;
   ipfs: string;
   name: string;
   previousId: string | null;

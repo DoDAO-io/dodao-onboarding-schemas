@@ -12,6 +12,7 @@ export interface GuideInput {
   from: string;
   categories: string[];
   content: string;
+  discordWebhook: string;
   name: string;
   space: string;
   steps: GuideStepInput[];
