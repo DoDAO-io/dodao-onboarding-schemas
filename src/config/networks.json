@@ -646,11 +646,12 @@
     }
   },
   "ONE": {
-    "1666600000": {
-      "key": "1666600000",
+    "mainnet": {
+      "key": "mainnet",
       "name": "Harmony Mainnet",
       "chainId": 1666600000,
       "network": "mainnet",
+      "networkId": "mainnet",
       "rpc": [
         "https://api.harmony.one",
         "https://s1.api.harmony.one",
@@ -659,11 +660,12 @@
       ],
       "explorer": "https://explorer.harmony.one"
     },
-    "1666700000": {
-      "key": "1666700000",
+    "testnet": {
+      "key": "testnet",
       "name": "Harmony Testnet",
       "chainId": 1666700000,
       "network": "testnet",
+      "networkId": "testnet",
       "rpc": [
         "https://api.s0.b.hmny.io",
         "https://api.s1.b.hmny.io",
