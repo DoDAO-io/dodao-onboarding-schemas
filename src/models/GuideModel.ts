@@ -30,6 +30,7 @@ export interface UserInput {
   label: string;
   order: number;
   uuid: string;
+  required: boolean;
 }
 
 export interface GuideStep {
