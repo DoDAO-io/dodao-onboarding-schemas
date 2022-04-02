@@ -20,12 +20,25 @@ export interface GuideQuestion {
   uuid: string;
 }
 
+export enum InputType {
+  PublicShortInput = 'PublicShortInput',
+  PrivateShortInput = 'PrivateShortInput'
+}
+
+export interface GuideInputs {
+  inputType: InputType;
+  label: string;
+  order: number;
+  uuid: string;
+}
+
 export interface GuideStep {
   content: string;
   id?: string;
   name: string;
   order: number;
   questions: GuideQuestion[];
+  guideInputs: GuideInputs[];
   uuid: string;
 }
 
