@@ -40,7 +40,7 @@ export interface GuideStep {
   id?: string;
   name: string;
   order: number;
-  stepItems: GuideQuestion[] | UserInput[];
+  stepItems: (GuideQuestion | UserInput)[];
   uuid: string;
 }
 
