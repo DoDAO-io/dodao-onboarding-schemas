@@ -4,8 +4,7 @@ export interface GuideStepInput {
   content: string;
   name: string;
   order: number;
-  questions: GuideQuestion[];
-  userInputs: UserInput[];
+  stepItems: GuideQuestion[] | UserInput[];
   uuid: string;
 }
 

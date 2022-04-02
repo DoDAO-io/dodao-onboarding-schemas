@@ -5,31 +5,33 @@ export enum QuestionType {
   MultipleChoice = 'MultipleChoice'
 }
 
+export enum InputType {
+  PublicShortInput = 'PublicShortInput',
+  PrivateShortInput = 'PrivateShortInput'
+}
+
+export interface GuideStepItem {
+  // This is undefined for the old questions. The questions will have to be migrated
+  type: InputType | QuestionType;
+  order: number;
+  uuid: string;
+}
+
 export interface QuestionChoice {
   content: string;
   key: string;
   order: number;
 }
 
-export interface GuideQuestion {
+export interface GuideQuestion extends GuideStepItem {
   answerKeys: string[];
   choices: QuestionChoice[];
   content: string;
-  order: number;
   questionType: QuestionType;
-  uuid: string;
 }
 
-export enum InputType {
-  PublicShortInput = 'PublicShortInput',
-  PrivateShortInput = 'PrivateShortInput'
-}
-
-export interface UserInput {
-  inputType: InputType;
+export interface UserInput extends GuideStepItem {
   label: string;
-  order: number;
-  uuid: string;
   required: boolean;
 }
 
@@ -38,8 +40,7 @@ export interface GuideStep {
   id?: string;
   name: string;
   order: number;
-  questions: GuideQuestion[];
-  userInputs: UserInput[];
+  stepItems: GuideQuestion[] | UserInput[];
   uuid: string;
 }
 
