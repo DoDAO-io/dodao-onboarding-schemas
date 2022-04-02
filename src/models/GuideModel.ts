@@ -25,7 +25,7 @@ export enum InputType {
   PrivateShortInput = 'PrivateShortInput'
 }
 
-export interface GuideInputs {
+export interface UserInput {
   inputType: InputType;
   label: string;
   order: number;
@@ -38,7 +38,7 @@ export interface GuideStep {
   name: string;
   order: number;
   questions: GuideQuestion[];
-  guideInputs: GuideInputs[];
+  userInputs: UserInput[];
   uuid: string;
 }
 

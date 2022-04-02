@@ -1,11 +1,11 @@
-import { GuideInputs, GuideQuestion } from 'models/GuideModel';
+import { GuideQuestion, UserInput } from 'models/GuideModel';
 
 export interface GuideStepInput {
   content: string;
   name: string;
   order: number;
   questions: GuideQuestion[];
-  guideInputs: GuideInputs[];
+  userInputs: UserInput[];
   uuid: string;
 }
 
