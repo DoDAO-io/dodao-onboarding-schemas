@@ -1,10 +1,17 @@
-export interface GuideQuestionSubmission {
-  selectedAnswerKeys: string[];
+export enum StepItemSubmissionType {
+  Question = 'Question',
+  UserInput = 'UserInput'
+}
+
+export interface GuideStepItemSubmission {
+  selectedAnswerKeys?: string[];
+  userInput?: string;
   uuid: string;
+  type: StepItemSubmissionType;
 }
 
 export interface GuideStepSubmission {
-  questionResponses: GuideQuestionSubmission[];
+  itemResponses: GuideStepItemSubmission[];
   uuid: string;
 }
 
