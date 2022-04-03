@@ -1,6 +1,7 @@
 export interface GuideModelInput {
   order: number;
   uuid: string;
+  guideUuid: string;
 }
 
 export interface GuideBundleInput {
