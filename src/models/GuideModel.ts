@@ -62,3 +62,11 @@ export interface GuideModel {
 }
 
 export type GuideWithoutSteps = Omit<GuideModel, 'steps'>;
+
+export const isQuestion = (item: GuideStepItem) =>
+  item.type === QuestionType.MultipleChoice ||
+  item.type === QuestionType.SingleChoice;
+
+export const isUserInput = (item: GuideStepItem) =>
+  item.type === InputType.PublicShortInput ||
+  item.type === InputType.PrivateShortInput;
