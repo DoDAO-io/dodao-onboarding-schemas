@@ -1,10 +1,10 @@
-export interface GuideModelInput {
+export interface BundleGuideInput {
   order: number;
   uuid: string;
   guideUuid: string;
 }
 
-export interface GuideBundleInput {
+export interface BundleInput {
   from: string;
   categories: string[];
   excerpt: string;
@@ -12,7 +12,7 @@ export interface GuideBundleInput {
   discordWebhook?: string;
   name: string;
   space: string;
-  guides: GuideModelInput[];
+  bundleGuides: BundleGuideInput[];
   thumbnail?: string;
   timestamp?: number;
   uuid: string;
