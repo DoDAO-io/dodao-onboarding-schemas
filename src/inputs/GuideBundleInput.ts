@@ -1,6 +1,6 @@
 export interface GuideInBundleInput {
   order: number;
-  uuid: string;
+  bundleUuid: string;
   guideUuid: string;
 }
 
@@ -13,7 +13,7 @@ export interface GuideBundleInput {
   name: string;
   space: string;
   bundleGuides: GuideInBundleInput[];
-  thumbnail?: string;
+  thumbnail?: string;ß
   timestamp?: number;
   uuid: string;
 }
