@@ -1,10 +1,10 @@
-export interface BundleGuideInput {
+export interface GuideInBundleInput {
   order: number;
   uuid: string;
   guideUuid: string;
 }
 
-export interface BundleInput {
+export interface GuideBundleInput {
   from: string;
   categories: string[];
   excerpt: string;
@@ -12,7 +12,7 @@ export interface BundleInput {
   discordWebhook?: string;
   name: string;
   space: string;
-  bundleGuides: BundleGuideInput[];
+  bundleGuides: GuideInBundleInput[];
   thumbnail?: string;
   timestamp?: number;
   uuid: string;

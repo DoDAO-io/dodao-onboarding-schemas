@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Guide": {
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "from": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+
+        "name": {
+          "type": "string"
+        },
+        "excerpt": {
+          "type": "string"
+        },
+        "space": {
+          "type": "string"
+        },
+        "bundleGuides": {
+          "items": {
+            "$ref": "#/definitions/GuideInBundleInput"
+          },
+          "type": "array"
+        },
+        "timestamp": {
+          "type": "number"
+        },
+        "uuid": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "GuideInBundleInput": {
+      "properties": {
+        "bundleUuid": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "guideUuid": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

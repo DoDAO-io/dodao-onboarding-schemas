@@ -1,7 +1,11 @@
 import { GuideModel } from 'models/GuideModel';
 import { SpaceModel } from 'models/SpaceModel';
 
-export interface GuideBundleModel {
+export interface GuideInBundleModel extends GuideModel {
+  order: number;
+}
+
+export interface GuideBundleWithoutGuidesModel {
   id: string;
   authors: string[];
   categories: string[];
@@ -10,11 +14,13 @@ export interface GuideBundleModel {
   discordWebhook?: string;
   ipfs: string;
   name: string;
-  previousId: string | null;
   space: SpaceModel;
-  guides: GuideModel[];
   thumbnail?: string;
   timestamp?: number;
   uuid: string;
   version: number;
+}
+
+export interface GuideBundleModel extends GuideBundleWithoutGuidesModel {
+  bundleGuides: GuideInBundleModel[];
 }

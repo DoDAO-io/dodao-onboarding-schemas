@@ -61,6 +61,10 @@ export interface GuideModel {
   version: number;
 }
 
+export interface GudieInBundleModel extends GuideModel {
+  order: number;
+}
+
 export type GuideWithoutSteps = Omit<GuideModel, 'steps'>;
 
 export const isQuestion = (item: GuideStepItem) =>
