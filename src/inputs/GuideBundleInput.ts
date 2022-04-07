@@ -1,6 +1,5 @@
 export interface GuideInBundleInput {
   order: number;
-  bundleUuid: string;
   guideUuid: string;
 }
 

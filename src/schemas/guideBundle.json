@@ -39,9 +39,6 @@
     },
     "GuideInBundleInput": {
       "properties": {
-        "bundleUuid": {
-          "type": "string"
-        },
         "order": {
           "type": "number"
         },
