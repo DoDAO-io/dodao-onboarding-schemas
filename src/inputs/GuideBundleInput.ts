@@ -13,7 +13,7 @@ export interface GuideBundleInput {
   name: string;
   space: string;
   bundleGuides: GuideInBundleInput[];
-  thumbnail?: string;ß
+  thumbnail?: string;
   timestamp?: number;
   uuid: string;
 }
