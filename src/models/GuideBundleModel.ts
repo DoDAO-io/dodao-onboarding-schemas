@@ -14,6 +14,7 @@ export interface GuideBundleWithoutGuidesModel {
   discordWebhook?: string;
   ipfs: string;
   name: string;
+  previousId: string | null;
   space: SpaceModel;
   thumbnail?: string;
   timestamp?: number;
