@@ -6,10 +6,11 @@ export interface SpaceModel {
   categories: string[];
   creator: string;
   github?: string;
+  members: string[];
   mission: string;
   name: string;
   network: string;
-  members: string[];
+  skin: string;
   terms?: string;
   twitter?: string;
 }

@@ -8,6 +8,7 @@ export interface SpaceSettingsInput {
   members: string[];
   mission: string;
   network: string;
+  skin: string;
   terms: string;
   twitter: string;
   blockchain: string;

@@ -111,6 +111,11 @@
           },
           "title": "admins"
         },
+        "skin": {
+          "type": "string",
+          "title": "skin",
+          "maxLength": 128
+        },
         "filters": {
           "type": "object",
           "properties": {
@@ -169,7 +174,7 @@
           }
         }
       },
-      "required": ["name", "network", "mission", "blockchain"],
+      "required": ["name", "network", "mission", "blockchain", "skin"],
       "additionalProperties": false
     }
   }
