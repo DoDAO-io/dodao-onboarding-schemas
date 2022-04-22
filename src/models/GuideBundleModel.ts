@@ -5,6 +5,12 @@ export interface GuideInBundleModel extends GuideModel {
   order: number;
 }
 
+export enum GuideBundleType {
+  Onboarding = 'Onboarding',
+  HowTo = 'HowTo',
+  LevelUp = 'LevelUp'
+}
+
 export interface GuideBundleWithoutGuidesModel {
   id: string;
   authors: string[];
@@ -12,6 +18,7 @@ export interface GuideBundleWithoutGuidesModel {
   excerpt: string;
   content: string;
   discordWebhook?: string;
+  bundleType: GuideBundleType;
   ipfs: string;
   name: string;
   previousId: string | null;

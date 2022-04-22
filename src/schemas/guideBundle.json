@@ -12,7 +12,9 @@
         "id": {
           "type": "string"
         },
-
+        "bundleType": {
+          "type": "string"
+        },
         "name": {
           "type": "string"
         },

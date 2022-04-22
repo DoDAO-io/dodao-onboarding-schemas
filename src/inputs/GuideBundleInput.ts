@@ -1,17 +1,20 @@
+import { GuideBundleType } from 'models/GuideBundleModel';
+
 export interface GuideInBundleInput {
   order: number;
   guideUuid: string;
 }
 
 export interface GuideBundleInput {
-  from: string;
+  bundleGuides: GuideInBundleInput[];
+  bundleType: GuideBundleType;
   categories: string[];
-  excerpt: string;
   content: string;
   discordWebhook?: string;
+  excerpt: string;
+  from: string;
   name: string;
   space: string;
-  bundleGuides: GuideInBundleInput[];
   thumbnail?: string;
   timestamp?: number;
   uuid: string;

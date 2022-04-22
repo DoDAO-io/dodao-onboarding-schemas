@@ -10,6 +10,12 @@ export enum InputType {
   PrivateShortInput = 'PrivateShortInput'
 }
 
+export enum GuideType {
+  Onboarding = 'Onboarding',
+  HowTo = 'HowTo',
+  LevelUp = 'LevelUp'
+}
+
 export interface GuideStepItem {
   // This is undefined for the old questions. The questions will have to be migrated
   type: InputType | QuestionType;
@@ -50,6 +56,7 @@ export interface GuideModel {
   categories: string[];
   content: string;
   discordWebhook?: string;
+  guideType: GuideType;
   ipfs: string;
   name: string;
   previousId: string | null;

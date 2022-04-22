@@ -1,4 +1,4 @@
-import { GuideQuestion, UserInput } from 'models/GuideModel';
+import { GuideQuestion, GuideType, UserInput } from 'models/GuideModel';
 
 export interface GuideStepInput {
   content: string;
@@ -13,6 +13,7 @@ export interface GuideInput {
   categories: string[];
   content: string;
   discordWebhook?: string;
+  guideType: GuideType;
   name: string;
   space: string;
   steps: GuideStepInput[];

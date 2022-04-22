@@ -12,7 +12,9 @@
         "id": {
           "type": "string"
         },
-
+        "guideType": {
+          "type": "string"
+        },
         "name": {
           "type": "string"
         },
