@@ -14,11 +14,11 @@ export enum GuideBundleType {
 export interface GuideBundleWithoutGuidesModel {
   id: string;
   authors: string[];
+  bundleType: GuideBundleType;
   categories: string[];
   excerpt: string;
   content: string;
   discordWebhook?: string;
-  bundleType: GuideBundleType;
   ipfs: string;
   name: string;
   previousId: string | null;
