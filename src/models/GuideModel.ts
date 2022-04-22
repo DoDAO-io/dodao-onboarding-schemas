@@ -10,10 +10,11 @@ export enum InputType {
   PrivateShortInput = 'PrivateShortInput'
 }
 
+// These don't follow the naming convention as we used the type in url
 export enum GuideType {
-  Onboarding = 'Onboarding',
-  HowTo = 'HowTo',
-  LevelUp = 'LevelUp'
+  Onboarding = 'onboarding',
+  HowTo = 'how-to',
+  LevelUp = 'level-up'
 }
 
 export interface GuideStepItem {
