@@ -17,6 +17,12 @@ export enum GuideType {
   LevelUp = 'level-up'
 }
 
+export const GuideTypesArray = [
+  GuideType.Onboarding,
+  GuideType.HowTo,
+  GuideType.LevelUp
+];
+
 export interface GuideStepItem {
   // This is undefined for the old questions. The questions will have to be migrated
   type: InputType | QuestionType;
