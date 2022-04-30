@@ -3,6 +3,7 @@ export interface SpaceModel {
   about?: string;
   admins: string[];
   avatar?: string;
+  blockchain: string;
   categories: string[];
   creator: string;
   github?: string;
