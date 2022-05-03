@@ -1,4 +1,5 @@
 import { GuideBundleType } from 'models/GuideBundleModel';
+import { GuidePublishStatus } from 'models/GuideModel';
 
 export interface GuideInBundleInput {
   order: number;
@@ -14,6 +15,8 @@ export interface GuideBundleInput {
   excerpt: string;
   from: string;
   name: string;
+  publishStatus: GuidePublishStatus;
+  socialShareImage?: string;
   space: string;
   thumbnail?: string;
   timestamp?: number;

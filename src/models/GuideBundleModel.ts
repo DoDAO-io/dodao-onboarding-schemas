@@ -1,4 +1,4 @@
-import { GuideModel } from 'models/GuideModel';
+import { GuideModel, GuidePublishStatus } from 'models/GuideModel';
 import { SpaceModel } from 'models/SpaceModel';
 
 export interface GuideInBundleModel extends GuideModel {
@@ -22,6 +22,8 @@ export interface GuideBundleWithoutGuidesModel {
   ipfs: string;
   name: string;
   previousId: string | null;
+  publishStatus: GuidePublishStatus;
+  socialShareImage?: string;
   space: SpaceModel;
   thumbnail?: string;
   timestamp?: number;

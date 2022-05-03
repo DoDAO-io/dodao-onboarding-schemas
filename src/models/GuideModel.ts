@@ -17,6 +17,11 @@ export enum GuideType {
   LevelUp = 'level-up'
 }
 
+export enum GuidePublishStatus {
+  Live = 'Live',
+  Draft = 'Draft'
+}
+
 export const GuideTypesArray = [
   GuideType.Onboarding,
   GuideType.HowTo,
@@ -67,6 +72,8 @@ export interface GuideModel {
   ipfs: string;
   name: string;
   previousId: string | null;
+  publishStatus: GuidePublishStatus;
+  socialShareImage?: string;
   space: SpaceModel;
   steps: GuideStep[];
   thumbnail?: string;
