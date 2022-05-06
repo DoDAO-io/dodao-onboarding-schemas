@@ -1,4 +1,4 @@
-import { GuideModel, GuidePublishStatus } from 'models/GuideModel';
+import { GuideModel } from 'models/GuideModel';
 import { SpaceModel } from 'models/SpaceModel';
 
 export interface GuideInBundleModel extends GuideModel {
@@ -9,6 +9,11 @@ export enum GuideBundleType {
   Onboarding = 'Onboarding',
   HowTo = 'HowTo',
   LevelUp = 'LevelUp'
+}
+
+export enum GuideBundlePublishStatus {
+  Live = 'Live',
+  Draft = 'Draft'
 }
 
 export interface GuideBundleWithoutGuidesModel {
@@ -22,7 +27,7 @@ export interface GuideBundleWithoutGuidesModel {
   ipfs: string;
   name: string;
   previousId: string | null;
-  publishStatus: GuidePublishStatus;
+  publishStatus: GuideBundlePublishStatus;
   socialShareImage?: string;
   space: SpaceModel;
   thumbnail?: string;

@@ -18,6 +18,12 @@
         "name": {
           "type": "string"
         },
+        "publishStatus": {
+          "type": "string"
+        },
+        "socialShareImage": {
+          "type": "string"
+        },
         "excerpt": {
           "type": "string"
         },

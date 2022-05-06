@@ -18,6 +18,12 @@
         "name": {
           "type": "string"
         },
+        "publishStatus": {
+          "type": "string"
+        },
+        "socialShareImage": {
+          "type": "string"
+        },
         "space": {
           "type": "string"
         },
@@ -106,10 +112,7 @@
       "type": "object"
     },
     "QuestionType": {
-      "enum": [
-        "MultipleChoice",
-        "SingleChoice"
-      ],
+      "enum": ["MultipleChoice", "SingleChoice"],
       "type": "string"
     }
   }
