@@ -4,6 +4,7 @@ export interface SpaceDiscordModel {
   accessTokenExpiry: number;
   createdAt: number;
   refreshToken: string;
+  selectedGuideId?: string;
   spaceId: string;
   updatedAt: number;
 }

@@ -7,6 +7,7 @@ export interface SpaceModel {
   categories: string[];
   creator: string;
   discordAccessToken?: string;
+  discordGuidId?: string;
   github?: string;
   members: string[];
   mission: string;
