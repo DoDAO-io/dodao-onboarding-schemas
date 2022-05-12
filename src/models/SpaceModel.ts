@@ -6,7 +6,6 @@ export interface SpaceModel {
   blockchain: string;
   categories: string[];
   creator: string;
-  discordAccessToken?: string;
   discordGuildId?: string;
   github?: string;
   members: string[];
