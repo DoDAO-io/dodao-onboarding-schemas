@@ -27,4 +27,5 @@ export interface GuideInput {
   timestamp?: number;
   thumbnail?: string;
   uuid: string;
+  discordRoleIds?: string[];
 }
