@@ -1,6 +1,6 @@
 import {
-  GuideQuestion,
   GuidePublishStatus,
+  GuideQuestion,
   GuideType,
   UserInput
 } from 'models/GuideModel';
@@ -16,6 +16,7 @@ export interface GuideStepInput {
 export interface GuideInput {
   categories: string[];
   content: string;
+  discordRoleIds: string[];
   discordWebhook?: string;
   from: string;
   guideType: GuideType;
@@ -27,5 +28,4 @@ export interface GuideInput {
   timestamp?: number;
   thumbnail?: string;
   uuid: string;
-  discordRoleIds?: string[];
 }
